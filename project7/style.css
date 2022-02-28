@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+header{
+    max-width: 100%;
+    height: 80vh;
+    background-image: url("./img/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    
+}
+
+.navbar .logo{
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+    font-style: oblique;
+}
+
+.navbar nav{
+   display: flex;
+   align-items: center;
+}
+
+
+.navbar ul li{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar .hamburger{
+    display: none;
+}
+
+header .box{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+}
+
+header .box .txt1{
+    margin: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.wrapper{
+    max-width: 90%;
+    background: white;
+    margin: 80px auto;
+}
+
+.one{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(400px, auto);
+}
+
+.one .box2{
+    color: black;
+    position: relative;
+    
+}
+
+.one .box2 .small{
+    text-align: center;
+    background: white;
+    position: absolute;
+    height: 70%;
+    bottom: -20px;
+    left: -200px;
+    padding: 40px;
+    
+}
+
+
+.one .box2 h1{
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.one .box2 p{
+    font-size: 1.3em;
+
+  }
+
+  .two{
+      margin-top: 100px;
+      width: 100%;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4,1fr);
+      /* grid-auto-rows: minmax(, auto); */
+      grid-template-areas: "box1 box1 box2 box2"
+      "box3 box4 box5 box6"
+      "box7 box8 box9 box10";
+  }
+
+  .two .box1{
+      grid-area: box1;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin-bottom: 40px;
+
+  }
+
+  .two .box1 h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 100;
+}
+  .two .box2{
+      margin-bottom: 40px;
+    grid-area: box2;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.two .box2 a{
+  color: black;
+  text-transform: uppercase;
+  border: 2px solid black;
+  padding: 0.6em 1.6em;
+}
+.two .box3{
+    grid-area: box3;
+}
+.two .box4{
+    grid-area: box4;
+}
+.two .box5{
+    grid-area: box5;
+}
+.two .box6{
+    grid-area: box6;
+}
+.two .box7{
+    grid-area: box7;
+}
+.two .box8{
+    grid-area: box8;
+}
+.two .box9{
+    grid-area: box9;
+}
+.two .box10{
+    grid-area: box10;
+}
+
+.box{
+    position: relative;
+}
+
+.box img{
+    width: 100%;
+    height: 500px;
+}
+
+.box h3{
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    color: white;
+    font-size: 1.8em;
+}
+
+footer{
+    margin-top: 100px;
+    max-width: 100%;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "ftb1 ftb2"
+    "ftb3 ftb4";
+    gap: 30px;
+    padding: 40px 80px;
+}
+
+footer .ftb1{
+    grid-area: ftb1;
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+    font-style: oblique;
+    text-align: center;
+}
+
+footer .ftb2{
+    grid-area: ftb2;
+    text-align: center;
+}
+footer .ftb2 img{
+    margin-right: 20px;
+    border-radius: 50%;
+}
+footer .ftb3{
+    grid-area: ftb3;
+    text-align: center;
+}
+footer .ftb3 ul li{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    display: inline-block;
+    margin-right: 20px;
+}
+footer .ftb4{
+    grid-area: ftb4;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+@media screen and (max-width:1197px){
+
+    
+    .one .box2 .small{
+        /* width: 100%; */
+        bottom: 20px;
+        height: 100%;
+        /* left: 0px; */
+    }
+}
+
+@media screen and (max-width:1164px){
+
+    .wrapper{
+        max-width: 100%;
+    }
+
+    header .box{
+        position: static;
+        width: 80%;
+        max-width: 80%;
+        margin: 80px auto;
+        text-align: center;
+    }
+    
+    .one{
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .one .box2{
+        margin-top: 70px;
+    }
+    
+    .one .box2 .small{
+     position: relative;
+     left: 0px;
+     text-align: center;
+    }
+
+    .two{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "box1 box1"
+        "box3 box4"
+        "box5 box6"
+        "box7 box8"
+        "box9 box10"
+        "box2 box2";
+    }
+
+    
+
+    .two .box1{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two .box2{
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:816px){
+
+    header .navbar nav{
+        display: none;
+    }
+    header .navbar .hamburger{
+        display: block;
+        align-items: center;
+    }
+    header .navbar .hamburger .close{
+        display: none;
+    }
+}
+
+@media screen and (max-width:730px){
+    header{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .one{
+        text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .one .box1 img{
+       width: 90%;
+    }
+    .two{
+        text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "box1"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8"
+        "box9"
+        "box10"
+        "box2";
+    }
+
+    footer{
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "ftb1"
+        "ftb3"
+        "ftb2"
+        "ftb4";
+    }
+
+    footer .ftb3 ul li{
+        display: block;
+        margin-bottom: 20px;
+    }
+}
